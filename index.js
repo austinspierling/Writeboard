@@ -1,6 +1,11 @@
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
+/* @Notes
+ * require(string (module/pathToFile)) is Node.js way of importing.
+ * Dependencies listed in package.json, cannot be used in file scope until 'require()'d
+ */
+
+var express = require('express');   // Require's Express.js (Node.js module) and stores in var
+var app = express();                // Creating new object of class express
+var http = require('http').Server(app);   
 var io = require('socket.io')(http);
 var dbManager = require('./database_manager.js');
 

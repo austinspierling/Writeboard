@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient,
     test = require('assert');
 var url =  process.env.MONGO_CONNSTRING;
-var databaseMode = true;
+var databaseMode = false;
 
 console.log(url);
 
